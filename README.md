@@ -30,7 +30,7 @@ O "projeto-pizzaria" é uma aplicação web desenvolvida para gerenciar as opera
 2. Navegue até a pasta do projeto.
 3. Execute o comando `yarn run dev` para rodar o servidor.
 
-## Dependências do Backend
+## Testes
 
 Para fazer os testes das requisições utilizei o Insomnia
 
