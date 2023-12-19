@@ -15,6 +15,7 @@ O "projeto-pizzaria" é uma aplicação web desenvolvida para gerenciar as opera
   
 ### Frontend
 - NextJS
+- SCSS
 
 ## Dependências do Backend
 - cors: ^2.8.5
