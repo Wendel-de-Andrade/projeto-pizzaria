@@ -1,45 +1,99 @@
-## Projeto Pizzaria 🍕
+# Projeto Pizzaria 🍕
 
-Este projeto está em desenvolvimento ativo. A parte do Backend foi concluída utilizando NodeJS, com PostgreSQL como banco de dados em conjunto com Prisma. A autenticação dos usuários foi implementada usando JWT token. A parte do Frontend está atualmente em desenvolvimento.
+Aplicação full stack para gerenciamento de pedidos de uma pizzaria, com autenticação, catálogo de produtos, categorias e fluxo de pedidos.
 
-## Descrição do Projeto
-O "projeto-pizzaria" é uma aplicação web desenvolvida para gerenciar as operações de uma pizzaria. A aplicação permite aos usuários fazer pedidos online, visualizar o menu e acompanhar o status do pedido.
+## Visão geral
 
-## Tecnologias Utilizadas
-### Backend
-- NodeJS
-- Prisma
+O projeto possui back-end em Node.js/TypeScript com API REST, autenticação via JWT, persistência em PostgreSQL usando Prisma ORM e front-end em Next.js/React.
+
+### Principais funcionalidades
+
+- Autenticação de usuários com JWT e hash de senha
+- Cadastro e consulta de categorias e produtos
+- Upload de imagens de produtos
+- Criação e gerenciamento de pedidos
+- Relacionamento entre pedidos, itens, produtos e categorias
+- Consumo da API pelo front-end em Next.js
+- Organização do front-end em `app`, `components`, `contexts` e `services`
+
+## Stack
+
+### Back-end
+
+- Node.js
+- TypeScript
+- Express
 - PostgreSQL
-- Typescript
-- JWT token
-  
-### Frontend
-- NextJS
-- SCSS
+- Prisma ORM
+- JWT
+- bcryptjs
+- Multer
 
-## Dependências do Backend
-- cors: ^2.8.5
-- express: ^4.18.2
-- express-async-errors: ^3.1.1
-- @types/cors (dev): ^2.8.14
-- @types/express (dev): ^4.17.18
-- ts-node-dev (dev): ^2.0.0
-- typescript (dev): ^5.2.2
+### Front-end
 
-## Como Instalar e Executar
-1. Clone o repositório para o seu computador usando `git clone https://github.com/Wendel-de-Andrade/projeto-pizzaria`.
-2. Navegue até a pasta do projeto.
-3. Execute o comando `yarn run dev` para rodar o servidor.
+- Next.js 14
+- React 18
+- TypeScript
+- Axios
+- Sass/SCSS
+- Context API
 
-## Testes
+## Estrutura
 
-Para fazer os testes das requisições utilizei o Insomnia
+```text
+projeto-pizzaria/
+├── backend/
+│   ├── prisma/
+│   └── src/
+└── frontend/
+    └── src/
+        ├── app/
+        ├── components/
+        ├── contexts/
+        └── services/
+```
 
-## Resultado
+## Banco de dados
 
-Video do Youtube abaixo:
+O schema utiliza PostgreSQL e Prisma, com entidades para usuários, categorias, produtos, pedidos e itens. Os relacionamentos permitem vincular produtos a categorias e itens a pedidos/produtos.
 
-[![Demonstração do Projeto](http://img.youtube.com/vi/dH_NEiL7zJk/0.jpg)](https://youtu.be/dH_NEiL7zJk "Demonstração do Projeto")
+## Como executar
+
+### Back-end
+
+1. Entre em `backend`.
+2. Instale as dependências.
+3. Configure `DATABASE_URL` no ambiente.
+4. Execute as migrations do Prisma.
+5. Inicie com:
+
+```bash
+npm run dev
+```
+
+### Front-end
+
+1. Entre em `frontend`.
+2. Instale as dependências.
+3. Inicie com:
+
+```bash
+npm run dev
+```
+
+O front-end utiliza Next.js e consome a API do projeto.
+
+## Demonstração
+
+[Vídeo de demonstração no YouTube](https://youtu.be/dH_NEiL7zJk)
+
+## Próximos passos
+
+- Adicionar testes automatizados de API e componentes
+- Adicionar pipeline de CI
+- Documentar variáveis de ambiente com `.env.example`
+- Preparar deploy público da aplicação
 
 ## Licença
-Este projeto está sob a licença MIT.
+
+MIT
